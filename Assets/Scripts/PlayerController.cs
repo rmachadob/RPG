@@ -9,9 +9,27 @@ public class PlayerController : MonoBehaviour {
     //Animator component added automatically when I created it
     public Animator myAnim;
 
+    //static: there can be only one version of this
+    public static PlayerController instance;
+
 	// Use this for initialization
 	void Start () {
-		
+
+        if (instance == null)//only empty when the game starts running
+        {
+            //avoiding multiple players when chaging areas
+            //the instance value has to be equal to this script
+            instance = this;
+        }
+        else
+        {//if he is not the only one, destroy the second one imediately
+            Destroy(gameObject);
+        }
+        //Whenever you load a scene, do not destroy whatever is between these brackets
+        //By default the gameObject is whatever game object this script is attached to 
+        //I put it on the start function cause I only want that to happen once when the object is created
+        DontDestroyOnLoad(gameObject);
+
 	}
 	
 	// Update is called once per frame
