@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
     //static: there can be only one version of this
     public static PlayerController instance;
 
+    public string areaTransitionName;
+
 	// Use this for initialization
 	void Start () {
 

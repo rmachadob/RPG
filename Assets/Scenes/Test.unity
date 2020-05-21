@@ -335,6 +335,7 @@ MonoBehaviour:
   theRB: {fileID: 535672521}
   moveSpeed: 10
   myAnim: {fileID: 535672524}
+  areaTransitionName: 
 --- !u!95 &535672524
 Animator:
   serializedVersion: 3
@@ -362,11 +363,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4039527267606090, guid: 1c45d2986edbb154ca9a450557e93ae7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.73
+      value: 8.9
       objectReference: {fileID: 0}
     - target: {fileID: 4039527267606090, guid: 1c45d2986edbb154ca9a450557e93ae7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.54
+      value: -0.31
       objectReference: {fileID: 0}
     - target: {fileID: 4039527267606090, guid: 1c45d2986edbb154ca9a450557e93ae7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -391,6 +392,44 @@ Prefab:
     - target: {fileID: 4039527267606090, guid: 1c45d2986edbb154ca9a450557e93ae7, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114549027814623426, guid: 1c45d2986edbb154ca9a450557e93ae7,
+        type: 2}
+      propertyPath: areaTransitionName
+      value: Countryside-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764143833080062, guid: 1c45d2986edbb154ca9a450557e93ae7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764143833080062, guid: 1c45d2986edbb154ca9a450557e93ae7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 114549027814623426, guid: 1c45d2986edbb154ca9a450557e93ae7,
+        type: 2}
+      propertyPath: areaToLoad
+      value: Test2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61818094833852356, guid: 1c45d2986edbb154ca9a450557e93ae7,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.36062777
+      objectReference: {fileID: 0}
+    - target: {fileID: 61818094833852356, guid: 1c45d2986edbb154ca9a450557e93ae7,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.5151818
+      objectReference: {fileID: 0}
+    - target: {fileID: 61818094833852356, guid: 1c45d2986edbb154ca9a450557e93ae7,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.3883774
+      objectReference: {fileID: 0}
+    - target: {fileID: 61818094833852356, guid: 1c45d2986edbb154ca9a450557e93ae7,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.22334522
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c45d2986edbb154ca9a450557e93ae7, type: 2}
@@ -520,7 +559,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1238482119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.82, y: -0.86, z: -10}
+  m_LocalPosition: {x: -2.16, y: 1.93, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
