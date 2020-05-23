@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //alterei o Script Execution Order para antes do Default Time, assim ele roda antes do Area Entrance e para de bugar a posição do player nas trnasições de cena
-public class AreaExit : MonoBehaviour {
+public class AreaExit : MonoBehaviour
+{
     //generic Script we're gonna use to exit every scene
 
     public string areaToLoad;
-
     public string areaTransitionName;
     //esses objetos que eu crio aqui aparecem no Inspector dentro do Script que adicionei como componente
     public AreaEntrance theEntrance;
