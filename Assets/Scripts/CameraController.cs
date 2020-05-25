@@ -12,15 +12,27 @@ public class CameraController : MonoBehaviour {
     private Vector3 bottomLeftLimit;
     private Vector3 topRightLimit;
 
+    //quando a câmera passa do tile, passa sempre até a metade, por isso esses halfs aqui
+    private float halfHeigth;
+    private float halfWidth;
+
 	// Use this for initialization
 	void Start () {
         
         target = PlayerController.instance.transform;
-        //That gets from the tile map the minimum amount (furthest left on the x and furthest down on the y)
-        bottomLeftLimit = theMap.localBounds.min;
 
-        //pela lógica contrário uso o max pra pegar o limite de cima e da direita
-        topRightLimit = theMap.localBounds.max;
+        halfHeigth = Camera.main.orthographicSize;//a way built into Unity to get the current heigth of the camera
+        halfWidth = halfHeigth * Camera.main.aspect;//aspect is the aspect ratio on the screen, on this case, 16:9 (pra cada 9 unidades de altura eu mostro 16 de largura)
+
+        //solução de um carinha 
+        //theMap.CompressBounds();
+
+        //That gets from the tile map the minimum amount (furthest left on the x and furthest down on the y)
+        bottomLeftLimit = theMap.localBounds.min + new Vector3(halfWidth, halfHeigth, 0f);
+
+        //pela lógica contrário uso o max pra pegar o limite de cima e da direita. Menos pra travar no topo e na direita
+        topRightLimit = theMap.localBounds.max + new Vector3(-halfWidth, -halfHeigth, 0f);
+        
 	}
 	
 	// LateUpdate is called once per frame after Update

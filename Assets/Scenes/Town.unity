@@ -152,6 +152,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114508808565281486, guid: 2e07261bd8a4fbc41898a7fe816332bc,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1639892338}
+    - target: {fileID: 114508808565281486, guid: 2e07261bd8a4fbc41898a7fe816332bc,
+        type: 2}
+      propertyPath: theMap
+      value: 
+      objectReference: {fileID: 889019203}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e07261bd8a4fbc41898a7fe816332bc, type: 2}
   m_IsPrefabAsset: 0
@@ -12600,6 +12610,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bedb430faaf73c549aea19b03f4490eb, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &1639892338 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4557577415940324, guid: bedb430faaf73c549aea19b03f4490eb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1639892337}
 --- !u!1 &1724345672
 GameObject:
   m_ObjectHideFlags: 0
