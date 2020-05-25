@@ -28,7 +28,11 @@ public class PlayerController : MonoBehaviour {
         }
         else
         {//if he is not the only one, destroy the second one imediately
+            if(instance != this)
+            {
+
             Destroy(gameObject);
+            }
         }
         //Whenever you load a scene, do not destroy whatever is between these brackets
         //By default the gameObject is whatever game object this script is attached to 
