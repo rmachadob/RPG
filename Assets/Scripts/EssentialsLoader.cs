@@ -8,17 +8,16 @@ public class EssentialsLoader : MonoBehaviour {
     public GameObject player;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         if (UIFade.instance == null)
         {
-          UIFade.instance =  Instantiate(UIScreen).GetComponent<UIFade>();
+            Instantiate(UIScreen);
         }
 
         if (PlayerController.instance == null)
         {
-            PlayerController clone = Instantiate(player).GetComponent<PlayerController>();
-            PlayerController.instance = clone;
+            Instantiate(player);
         }
     }
 

@@ -19,9 +19,9 @@ public class CameraController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        // target = PlayerController.instance.transform;
+        target = PlayerController.instance.transform;
         //procura os objetos na tela e se achar um Player Controller usa como target
-        target = FindObjectOfType<PlayerController>().transform;
+        //target = FindObjectOfType<PlayerController>().transform;
         halfHeigth = Camera.main.orthographicSize;//a way built into Unity to get the current heigth of the camera
         halfWidth = halfHeigth * Camera.main.aspect;//aspect is the aspect ratio on the screen, on this case, 16:9 (pra cada 9 unidades de altura eu mostro 16 de largura)
 
