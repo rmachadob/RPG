@@ -32,7 +32,8 @@ public class CameraController : MonoBehaviour {
 
         //pela lógica contrário uso o max pra pegar o limite de cima e da direita. Menos pra travar no topo e na direita
         topRightLimit = theMap.localBounds.max + new Vector3(-halfWidth, -halfHeigth, 0f);
-        
+
+        PlayerController.instance.SetBounds(theMap.localBounds.min, theMap.localBounds.max);
 	}
 	
 	// LateUpdate is called once per frame after Update
