@@ -13,6 +13,8 @@ public class AreaExit : MonoBehaviour
     //esses objetos que eu crio aqui aparecem no Inspector dentro do Script que adicionei como componente
     public AreaEntrance theEntrance;
 
+    public float waitToLoad = 1f;
+    private bool shouldLoadAfterFade;
     // Use this for initialization
     void Start()
     {//as soon as this object starts, the entrance that we are linking will set the transitionName to be the same as the areaTransitionName 
@@ -22,23 +24,30 @@ public class AreaExit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(shouldLoadAfterFade)//Aqui eu digo se pode carregar a próxima cena depois do fade
+        {
+            waitToLoad -= Time.deltaTime;//usando o Time.deltaTime e o waiToLoad valendo 1, sempre vai levar 1 segundo, independente do FPS
+            if (waitToLoad <= 0)
+            {
+                shouldLoadAfterFade = false;
+                SceneManager.LoadScene(areaToLoad);
+            }
+        }
     }
 
     //test to see if anything enters the trigger collider 
     //Collider 2D is the name of wjhatever collider enters the trigger box (collision)
     private void OnTriggerEnter2D(Collider2D other)
     {
-
         //making sure it's actually the player entering the area, otherwise an NPC could trigger the transition out of nowhere
         //.tag that I attributed on Unity
-
         if (other.tag == "Player")
         {
-
             //load into a new scene(need to import Scene Management)
-            SceneManager.LoadScene(areaToLoad);
+            //SceneManager.LoadScene(areaToLoad);
 
+            shouldLoadAfterFade = true;
+            UIFade.instance.FadeToBlack();//metodo do UIFade
             PlayerController.instance.areaTransitionName = areaTransitionName;
         }
     }

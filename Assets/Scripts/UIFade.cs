@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//ctrl K + crtl f indent
 public class UIFade : MonoBehaviour {
 
     public static UIFade instance;
@@ -17,6 +17,7 @@ public class UIFade : MonoBehaviour {
 	void Start () {
         instance = this;
 
+        DontDestroyOnLoad(gameObject);//senao o Canvas não vai junto com a nova cena
 	}
 	
 	// Update is called once per frame
@@ -52,7 +53,7 @@ public class UIFade : MonoBehaviour {
     }
     public void FadeFromBlack()
     {
-        shouldFadeFromBlack = false;
-        shouldFadeToBlack = true;
+        shouldFadeFromBlack = true;
+        shouldFadeToBlack = false;
     }
 }

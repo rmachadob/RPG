@@ -14,10 +14,8 @@ public class AreaEntrance : MonoBehaviour {
             //EVERY OBJECT IN UNITY HAS A TRANSFORM ATTACHED TO IT
             //grab the payer's transform position and set it to be equal to the transform position of the Area Entrance
             PlayerController.instance.transform.position = transform.position;
-
-
-
-        }
+                                         }
+        UIFade.instance.FadeFromBlack();
 	}
 	
 	// Update is called once per frame
