@@ -14229,7 +14229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 1850879110}
   nameTest: 1
-  dalogBox: {fileID: 1850879108}
+  dialogBox: {fileID: 1970393381}
   nameBox: {fileID: 1292213577}
   dialogLines:
   - This
@@ -14237,7 +14237,7 @@ MonoBehaviour:
   - 'a test '
   - array
   - hurray!
-  currentLine: 4
+  currentLine: 0
 --- !u!1 &1850879108
 GameObject:
   m_ObjectHideFlags: 0
