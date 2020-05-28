@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//ctrl K + crtl f indent
 public class PlayerController : MonoBehaviour {
     //RB = Rigid Body
     public Rigidbody2D theRB;
