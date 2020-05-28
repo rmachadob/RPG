@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour {
     private Vector3 bottomLeftLimit;
     private Vector3 topRightLimit;
 
+    public bool canMove = true;
+
     // Use this for initialization
     void Start () {
 
@@ -37,15 +39,24 @@ public class PlayerController : MonoBehaviour {
         //I put it on the start function cause I only want that to happen once when the object is created
         DontDestroyOnLoad(gameObject);
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         //velocity is a Vector 2 type (2 values, Y and x)
         //GetAxisRaw to get a more precise value instead of only GetAxis(got a weird acceleration to it)
         //The axis I wanna use is the Horizontal (the x value = Horizontal
-        theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
+        if (canMove)
+        {
+            theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
 
+        
+        }
+        else
+        {
+            theRB.velocity = Vector2.zero;
+        }
         //Setting a Float value. I created moveX and moveY on the Blend Tree
         //I wanna set the moveX value to be the velocity of the Rigid Body on the x axis
         //The names moveX and moveY need to be the same from the ones I declared as a parameter on the Animator for the player
@@ -56,12 +67,13 @@ public class PlayerController : MonoBehaviour {
 
         //setting the lastMove values 
         //if an input at any moment is the whole number, the person is pushing in the direction
-        if(Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+        if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
         {
+            if (canMove) { 
             //we know the value that the player is inputing, so we store it as last value
             myAnim.SetFloat("lastMoveX", Input.GetAxisRaw("Horizontal"));
             myAnim.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
-
+            }
         }
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x),
