@@ -7,7 +7,9 @@ public class DialogActivator : MonoBehaviour {
     public string[] lines;
     //the player is in the area, check to see if they have pressed a button (bool)
     private bool canActivate;
-	// Use this for initialization
+
+    public bool isPerson = true;
+
 	void Start () {
 		
 	}
@@ -16,7 +18,7 @@ public class DialogActivator : MonoBehaviour {
 	void Update () {
 		if(canActivate && Input.GetButtonDown("Fire1") && !DialogManager.instance.dialogBox.activeInHierarchy)
         {
-            DialogManager.instance.ShowDialog(lines);
+            DialogManager.instance.ShowDialog(lines, isPerson);
         }
 	}
 
