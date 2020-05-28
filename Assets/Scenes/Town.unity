@@ -350,9 +350,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - NPC DIALOG
-  - ACTIVATOR
-  - WORKING
+  - n-Girl
+  - Please help me!
+  - n-Player
+  - Is everything okay?
+  - n-Girl
+  - No!
+  - My family has been kidnapped by a dragon.
+  - n-Player
+  - Don't worry.
+  - I'll save them.
 --- !u!61 &675180987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17280,7 +17287,7 @@ Prefab:
     - target: {fileID: 224848801168150126, guid: 85c04911d2cb02941b4059ad694dbe79,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 11.800049
+      value: 11.800293
       objectReference: {fileID: 0}
     - target: {fileID: 224848801168150126, guid: 85c04911d2cb02941b4059ad694dbe79,
         type: 2}
@@ -17455,8 +17462,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1, y: -331}
-  m_SizeDelta: {x: 0, y: -708.75}
+  m_AnchoredPosition: {x: -0.00002861, y: -294.9}
+  m_SizeDelta: {x: -86.4, y: -737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970393383
 MonoBehaviour:
